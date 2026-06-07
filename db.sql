@@ -1,0 +1,68 @@
+CREATE DATABASE IF NOT EXISTS fitzone_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE fitzone_db;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(160) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('customer','staff','admin') NOT NULL DEFAULT 'customer',
+  created_at DATETIME NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS classes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  description TEXT NOT NULL,
+  schedule VARCHAR(120) NOT NULL,
+  image_path VARCHAR(255) NULL
+);
+
+CREATE TABLE IF NOT EXISTS trainers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  specialization VARCHAR(160) NOT NULL,
+  bio TEXT NOT NULL,
+  photo_path VARCHAR(255) NULL
+);
+
+CREATE TABLE IF NOT EXISTS memberships (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  features TEXT NOT NULL,
+  image_path VARCHAR(255) NULL
+);
+
+CREATE TABLE IF NOT EXISTS bookings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  class_id INT NOT NULL,
+  created_at DATETIME NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (class_id) REFERENCES classes(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS queries (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(160) NOT NULL,
+  message TEXT NOT NULL,
+  status ENUM('open','closed') NOT NULL DEFAULT 'open',
+  created_at DATETIME NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS blog_posts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(200) NOT NULL,
+  category ENUM('Workouts','Nutrition','Success Stories') NOT NULL,
+  content TEXT NOT NULL,
+  image_path VARCHAR(255) NULL,
+  created_at DATETIME NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS gallery (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  caption VARCHAR(200) NOT NULL,
+  image_path VARCHAR(255) NOT NULL
+);
