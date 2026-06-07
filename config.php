@@ -5,6 +5,12 @@ $DB_NAME = 'fitzone_db';
 $DB_USER = 'root';
 $DB_PASS = ''; // Laragon default
 
+// Dynamically determine the base path (e.g. "/" or "/fitzone_fitness/")
+$base_dir = str_replace($_SERVER['DOCUMENT_ROOT'] ?? '', '', __DIR__);
+$base_dir = str_replace('\\', '/', $base_dir);
+$base_dir = trim($base_dir, '/');
+define('BASE_URL', '/' . ($base_dir ? $base_dir . '/' : ''));
+
 try {
     $pdo = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME;charset=utf8mb4", $DB_USER, $DB_PASS, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

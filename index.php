@@ -3,7 +3,7 @@
         <div class="heroimage"><div class="hero">
         <h2>Stronger. Healthier. Happier.</h2>
         <p>Join FitZone Fitness and access world-class equipment, certified trainers, dynamic classes, and a supportive community.</p>
-        <a class="btn-primary" href="/auth/register.php">Join Now</a>
+        <a class="btn-primary" href="<?=BASE_URL?>auth/register.php">Join Now</a>
     </div></div>
 </section>
 <h2 class="mt-4">Popular Classes</h2>
@@ -58,7 +58,7 @@ foreach($posts as $p): ?>
     <span class="badge"><?=htmlspecialchars($p['category'])?></span>
     <h3><?=htmlspecialchars($p['title'])?></h3>
     <p><?=htmlspecialchars($p['excerpt'])?>...</p>
-    <a class="btn-primary" href="/pages/blog.php?post=<?=$p['id']?>">Read</a>
+    <a class="btn-primary" href="<?=BASE_URL?>pages/blog.php?post=<?=$p['id']?>">Read</a>
   </div>
 <?php endforeach; ?>
 </div>
@@ -66,7 +66,7 @@ foreach($posts as $p): ?>
         <div class="contactimage"><div class="contacthero">
         <h2>Stay Updated with FitZone.</h2>
         <p>Contact FitZone Fitness and learn more about world-class equipment, certified trainers, dynamic classes, and a supportive community.</p>
-        <a class="btn-primary" href="/pages/contact.php">Contact</a>
+        <a class="btn-primary" href="<?=BASE_URL?>pages/contact.php">Contact</a>
     </div></div>
 </section>
 
