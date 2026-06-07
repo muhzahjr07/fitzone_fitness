@@ -1,0 +1,31 @@
+name: Build and Release Web Application
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Package and Create Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Zip Source Files
+        run: |
+          zip -r fitzone_fitness.zip . -x "*.git*" ".github*" "User Manual.pdf"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: fitzone_fitness.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
