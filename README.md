@@ -39,5 +39,14 @@ FitZone Fitness is a comprehensive web-based gym and fitness management applicat
    * Place the project folder in your local web server root directory (e.g. `htdocs` in XAMPP, `www` in WampServer, or using Laragon).
    * Open your browser and navigate to `http://localhost/fitzone_fitness`.
 
+## 📷 Screenshots
+
+<!-- Add your screenshots here, e.g. ![Dashboard](screenshots/dashboard.png) -->
+_Placeholders for application screenshots:_
+* **Dashboard / Home**: ![Dashboard](screenshots/dashboard.png)
+* **Classes & Bookings**: ![Classes and Bookings](screenshots/classes_bookings.png)
+* **Trainer Profiles**: ![Trainer Profiles](screenshots/trainers.png)
+
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE).
+
