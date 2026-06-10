@@ -41,11 +41,16 @@ FitZone Fitness is a comprehensive web-based gym and fitness management applicat
 
 ## 📷 Screenshots
 
-<!-- Add your screenshots here, e.g. ![Dashboard](screenshots/dashboard.png) -->
-_Placeholders for application screenshots:_
-* **Dashboard / Home**: ![Dashboard](screenshots/dashboard.png)
-* **Classes & Bookings**: ![Classes and Bookings](screenshots/classes_bookings.png)
-* **Trainer Profiles**: ![Trainer Profiles](screenshots/trainers.png)
+### Application Preview
+
+| | |
+|:---:|:---:|
+| **Home Page / Banner** | **Classes & Bookings** |
+| ![Home Page](screenshots/image%2020.png) | ![Classes & Bookings](screenshots/image%2021.png) |
+| **Certified Trainers** | **Membership Plans** |
+| ![Trainers](screenshots/image%2022.png) | ![Membership Plans](screenshots/image%2023.png) |
+| **Fitness Blog** | **Member Login / Contact Form** |
+| ![Blog](screenshots/image%2024.png) | ![Login / Contact Form](screenshots/image%2025.png) |
 
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE).
