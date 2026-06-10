@@ -20,13 +20,14 @@ FitZone Fitness is a comprehensive web-based gym and fitness management applicat
 ## 📦 Setup & Installation
 
 1. **Database Import:**
+
    * Create a MySQL database named `fitzone_db`.
    * Import the schema and sample data using the provided [db.sql](db.sql) file:
      ```bash
      mysql -u root -p fitzone_db < db.sql
      ```
-
 2. **Configuration:**
+
    * Edit [config.php](config.php) to update your database host, database name, username, and password credentials:
      ```php
      $DB_HOST = 'localhost';
@@ -34,8 +35,8 @@ FitZone Fitness is a comprehensive web-based gym and fitness management applicat
      $DB_USER = 'root';
      $DB_PASS = ''; // Your MySQL password
      ```
-
 3. **Deploy to local server:**
+
    * Place the project folder in your local web server root directory (e.g. `htdocs` in XAMPP, `www` in WampServer, or using Laragon).
    * Open your browser and navigate to `http://localhost/fitzone_fitness`.
 
@@ -43,15 +44,15 @@ FitZone Fitness is a comprehensive web-based gym and fitness management applicat
 
 ### Application Preview
 
-| | |
-|:---:|:---:|
-| **Home Page / Banner** | **Classes & Bookings** |
-| ![Home Page](screenshots/image%2020.png) | ![Classes & Bookings](screenshots/image%2021.png) |
-| **Certified Trainers** | **Membership Plans** |
-| ![Trainers](screenshots/image%2022.png) | ![Membership Plans](screenshots/image%2023.png) |
-| **Fitness Blog** | **Member Login / Contact Form** |
-| ![Blog](screenshots/image%2024.png) | ![Login / Contact Form](screenshots/image%2025.png) |
+|                                        |                                                  |
+| :------------------------------------: | :-----------------------------------------------: |
+|      **Home Page / Banner**      |           **Classes & Bookings**           |
+| ![Home Page](screenshots/image%2020.png) |  ![Classes & Bookings](screenshots/image%2021.png)  |
+|      **Certified Trainers**      |                 **Classes**                 |
+| ![Trainers](screenshots/image%2022.png) |   ![Membership Plans](screenshots/image%2023.png)   |
+|       **Membership Plans**       |               **Admin Dashboard**               |
+|   ![Blog](screenshots/image%2024.png)   | ![Login / Contact Form](screenshots/image%2025.png) |
 
 ## 📄 License
-This project is licensed under the [MIT License](LICENSE).
 
+This project is licensed under the [MIT License](LICENSE).
